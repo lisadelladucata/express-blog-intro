@@ -2,6 +2,8 @@ const express = require('express')
 const app = express()
 const port = 3001
 
+app.use(express.static('bacheca'))
+
 app.get('/', (req, res) => {
   res.send('Server del mio blog')
 })
@@ -9,36 +11,36 @@ app.get('/', (req, res) => {
 app.get('/bacheca', (req, res) => {
   res.json([
     {
-      "titolo": "Come migliorare la produttività",
-      "contenuto": "Scopri alcune tecniche per aumentare la tua produttività quotidiana, come la gestione del tempo, la focalizzazione sugli obiettivi e la gestione dello stress.",
-      "immagine": "produttivita.jpg",
-      "tags": ["produttività", "gestione del tempo", "efficienza"]
+      titolo: "Ciambellone: un dolce classico per ogni occasione",
+      contenuto: "Scopri come preparare un soffice e goloso ciambellone, perfetto per la colazione o una merenda in famiglia.",
+      immagine: "/img/ciambellone.jpeg",
+      tags: ["dolci", "colazione", "merenda"]
     },
     {
-      "titolo": "Ricette veloci per una cena sana",
-      "contenuto": "Impara a preparare piatti semplici e veloci che sono anche salutari, perfetti per una cena in famiglia o con amici.",
-      "immagine": "cena_sana.jpg",
-      "tags": ["cucina", "ricette veloci", "cena sana"]
+      titolo: "Cracker di barbabietola: uno snack sano e croccante",
+      contenuto: "Impara a preparare questi deliziosi cracker a base di barbabietola, ideali per uno snack leggero e ricco di nutrienti.",
+      immagine: "/img/cracker_barbabietola.jpeg",
+      tags: ["snack", "barbabietola", "salute"]
     },
     {
-      "titolo": "Guida al fitness per principianti",
-      "contenuto": "Un programma completo di esercizi per chi sta iniziando il proprio percorso di allenamento. Scopri come iniziare in sicurezza e con efficacia.",
-      "immagine": "fitness_principianti.jpg",
-      "tags": ["fitness", "allenamento", "principianti"]
+      titolo: "Pane fritto dolce: una ricetta golosa per tutti",
+      contenuto: "Scopri la ricetta del pane fritto dolce, un piatto che unisce la semplicità alla bontà, perfetto per una dolce pausa.",
+      immagine: "/img/pane_fritto_dolce.jpeg",
+      tags: ["dolci", "pane fritto", "ricette semplici"]
     },
     {
-      "titolo": "Viaggiare in modo sostenibile",
-      "contenuto": "Suggerimenti e trucchi per ridurre l'impatto ambientale durante i tuoi viaggi. Dalla scelta dei mezzi di trasporto alla gestione dei rifiuti.",
-      "immagine": "viaggio_sostenibile.jpg",
-      "tags": ["viaggi", "sostenibilità", "ambiente"]
+      titolo: "Pasta alla barbabietola: un piatto colorato e gustoso",
+      contenuto: "Prepara una pasta alla barbabietola dal sapore unico e il colore vivace, ideale per un pranzo sano e ricco di sapore.",
+      immagine: "/img/pasta_barbabietola.jpeg",
+      tags: ["pasta", "barbabietola", "cucina sana"]
     },
     {
-      "titolo": "Tecniche di meditazione per rilassarsi",
-      "contenuto": "Impara diverse tecniche di meditazione per alleviare lo stress e migliorare il tuo benessere mentale e fisico.",
-      "immagine": "meditazione_rilassamento.jpg",
-      "tags": ["meditazione", "relax", "benessere"]
+      titolo: "Torta paesana: un dolce rustico e tradizionale",
+      contenuto: "Scopri come preparare una torta paesana, un dolce tipico e ricco di sapori, ideale per le occasioni speciali.",
+      immagine: "/img/torta_paesana.jpeg",
+      tags: ["dolci", "torta", "tradizione"]
     }
-  ]
+  ]  
   )
 })
 
